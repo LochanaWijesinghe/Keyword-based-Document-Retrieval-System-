@@ -2,7 +2,7 @@
 
 class TextProcess{
 
-    static stopWords = new Set(['the', 'is', 'at', 'which', 'on', 'a', 'an', 'and']);
+    static stopWords = new Set(['the', 'is', 'are','at', 'with', 'in', 'on', 'a', 'an', 'and', 'or', 'but']);
     //set is faster than array for checking if a word exists
 
     //method to clean and split a string of text
