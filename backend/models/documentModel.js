@@ -1,11 +1,11 @@
 //handle SQL queries
 
-const pool = require('../congif/db');
+const pool = require('../config/db');
 
-class documentModel{
+class DocumentModel{
 
     static async insertDocument(title,content) {
-        const result = await pool.query('INSERT INTO dovuments (title, content) VALUES ($1, $2) RETURNING *', 
+        const result = await pool.query('INSERT INTO documents (title, content) VALUES ($1, $2) RETURNING *', 
             [title,content]
         );
 
@@ -13,9 +13,9 @@ class documentModel{
     }
 
     static async getAllDocuments(){
-        const result = await pool.query('SELECT * FROM docuemnts');
+        const result = await pool.query('SELECT * FROM documents');
         return result.rows;
     }
 }
 
-module.exports =DocumentModel;
+module.exports = DocumentModel;
