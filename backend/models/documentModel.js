@@ -16,6 +16,11 @@ class DocumentModel{
         const result = await pool.query('SELECT * FROM documents');
         return result.rows;
     }
+
+    static async getDocumentCount() {
+        const result = await pool.query('SELECT COUNT(*) FROM documents');
+        return parseInt(result.rows[0].count, 10);
+    }
 }
 
 module.exports = DocumentModel;

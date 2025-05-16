@@ -1,6 +1,6 @@
 //process document content
 
-class TextProcess{
+class TextProcessor{
 
     static stopWords = new Set(['the', 'is', 'are','at', 'with', 'in', 'on', 'a', 'an', 'and', 'or', 'but']);
     //set is faster than array for checking if a word exists
@@ -26,4 +26,4 @@ class TextProcess{
 
 }
 
-module.exports = TextProcess;
+module.exports = TextProcessor;
